@@ -1,0 +1,187 @@
+/* ==========================================================================
+           ESTILOS (style.css incorporado)
+           ========================================================================== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+/* El contenedor inicia invisible y un poco más abajo para la animación */
+.cv-container {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+/* Clase que activará JavaScript para iniciar la animación suave */
+.cv-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  border-bottom: 3px solid #2c3e50;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.3em;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  margin: 5px 0;
+  color: #16a085;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.datos-contacto {
+  margin-top: 12px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.datos-contacto span {
+  margin: 0 10px;
+}
+
+/* Secciones del CV */
+section {
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 1px solid #bdc3c7;
+  padding-bottom: 5px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Elementos de Lista y Bloques */
+.item {
+  margin-bottom: 20px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.puesto {
+  font-size: 1.1em;
+  color: #2c3e50;
+}
+
+.fecha {
+  color: #7f8c8d;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.institucion {
+  color: #16a085;
+  font-style: italic;
+  margin: 2px 0 8px 0;
+  font-weight: 500;
+}
+
+ul.lista-detalles {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+ul.lista-detalles li {
+  margin-bottom: 6px;
+}
+
+/* Contenedores de Habilidades (Badges) */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Transiciones para el efecto Hover en las habilidades */
+.tag-tecnica,
+.tag-blanda {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.tag-tecnica {
+  background: #e8f8f5;
+  color: #16a085;
+  border: 1px solid #a3e4d7;
+}
+
+.tag-tecnica:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(22, 160, 133, 0.2);
+}
+
+.tag-blanda {
+  background: #ebf5fb;
+  color: #2980b9;
+  border: 1px solid #a9cce3;
+}
+
+.tag-blanda:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 10px rgba(41, 128, 185, 0.2);
+}
+
+.idioma-item {
+  margin-bottom: 5px;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 650px) {
+  body {
+    padding: 10px;
+  }
+  .cv-container {
+    padding: 20px;
+  }
+  .item-header {
+    flex-direction: column;
+  }
+  .fecha {
+    margin-top: 3px;
+  }
+  .datos-contacto span {
+    display: block;
+    margin: 5px 0;
+  }
+}
